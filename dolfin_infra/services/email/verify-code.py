@@ -13,7 +13,13 @@ def send_email(receiver_email, code):
     password = "dolfin2023@deakin!"
     message = f"Subject: Verification Code\n\nYour verification code is {code}"
 
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+    """
+    SMTPBucket is used by developers to test integration of SMTP solutions 
+    into their application prior to deploying and gaining access to live domains. 
+    In event of deployment, replace SMTP IP with commercial IP.
+    """
+    with smtplib.SMTP("mail.smtpbucket.com", 8025) as server:
         server.starttls()
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
+        
