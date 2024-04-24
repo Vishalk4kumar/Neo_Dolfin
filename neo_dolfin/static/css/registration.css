@@ -21,6 +21,35 @@ body {
     overflow: visible;
 }
 
+/* Password Tooltip Styles */
+input[name="password"]:hover::after {
+    content: "Your password must contain one digit, one lowercase letter, one uppercase letter, one special character, no space, and it must be at least 12 characters long with a maximum of 20 characters";
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #000;
+    font-size: 0.7rem;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.password-tooltip {
+    display: none;
+    color: #ff0000;
+    font-size: 0.7rem;
+    position: absolute;
+    left: -230px;
+    top: 150px;
+}
+
+input[name="password"]:focus + .password-tooltip {
+    display: block;
+}
+
 /* Registration Form Styles */
 .input_area {
     background: rgba(220, 231, 235, 0.44); 
