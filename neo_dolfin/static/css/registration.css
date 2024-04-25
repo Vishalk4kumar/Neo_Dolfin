@@ -50,6 +50,40 @@ input[name="password"]:focus + .password-tooltip {
     display: block;
 }
 
+/*creating check field*/
+#checkField {
+    display: none; 
+    font-size: 8px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative; 
+    padding: 2px; 
+    text-align: left;
+    margin-top: 2px; 
+}
+/*setting the wrong field*/
+.wrong {
+    color: #E4716A;
+}
+
+.wrong:before {
+    position: relative; 
+    left: -6px; 
+    content: "●";
+}
+
+/* setting the correct field */
+.correct {
+    color: #037222;
+}
+
+.correct:before {
+    position: relative; 
+    left: -6px; 
+    content: "●"
+}
+
+
+
 /* Registration Form Styles */
 .input_area {
     background: rgba(220, 231, 235, 0.44); 
