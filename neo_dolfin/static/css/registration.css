@@ -50,6 +50,11 @@ input[name="password"]:focus + .password-tooltip {
     display: block;
 }
 
+/*creating hidden words*/
+.hidden {
+    display: none;
+}
+
 /*creating check field*/
 #checkField {
     display: none; 
